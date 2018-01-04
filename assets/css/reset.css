@@ -1,0 +1,93 @@
+/*Reset Stylesheet - Last Updated: 21 2 2014*/
+html,body,div,section,article,span,figure,figcaption,caption,img,
+h1,h2,h3,h4,h5,h6,p,a,button,blockquote,pre,abbr,address,small,strong,
+sub,sup,ol,ul,li,fieldset,form,label,input,output,textarea,legend,
+table,tr,th,td,footer,header,hgroup,aside,menu,nav,time,mark,
+audio,video,canvas,embed,iframe,object {
+   margin: 0;
+   padding: 0;
+   border: none;
+   outline: none;
+   font: inherit;
+   color: inherit;
+   cursor: default;
+   max-width: 100%;
+   text-decoration: none;
+   box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+}
+/*To support full screen settings*/
+html {height: 100%}
+/*HTML5 display-role reset for older browsers*/
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,img {
+   display: block;
+}
+/*Remove forms default browser stylings*/
+:focus { outline: none }
+::-moz-focus-inner { border: 0; padding: 0 }
+textarea, input { -webkit-appearance: none }
+input[type="checkbox"] { -webkit-appearance: checkbox }
+input[type="radio"] { -webkit-appearance: radio }
+
+/*Links & Buttons*/
+a,button {
+   cursor: pointer;
+   display: inline-block;
+   -webkit-tap-highlight-color: rgba(0,0,0,0);
+   -webkit-transition: all .1s linear;
+   -moz-transition: all .1s linear;
+   -o-transition: all .1s linear;
+   transition: all .1s linear;
+}
+   /*Linked images*/
+   a img {
+      cursor: pointer;
+   }
+/*Lists*/
+ul {
+   list-style-type: disc;
+   list-style-position: inside;
+   margin-left: 15px;
+}
+ol {
+   list-style-type: decimal;
+   list-style-position: inside;
+   margin-left: 15px;
+}
+ul ul,ol ul {
+   list-style-type: circle;
+   list-style-position: inside;
+   margin-left: 25px;
+}
+ol ol,ul ol {
+   list-style-type: lower-latin;
+   list-style-position: inside;
+   margin-left: 25px;
+}
+nav ul,nav ol {
+   margin: 0;
+   list-style: none;
+}
+/*Table*/
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+/*Other*/
+.active,.noLink,.disabled {
+   cursor: default !important;
+}
+sub,sup {
+   font-size: .8em;
+}
+abbr {
+   cursor: help;
+}
+   a abbr {
+      cursor: pointer;
+   }
+iframe {
+   border: 0;
+}

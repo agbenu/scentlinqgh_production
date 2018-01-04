@@ -1,0 +1,1 @@
+<img alt="<?php include ($_SERVER['DOCUMENT_ROOT']. "/assets/includes/website-name.inc"); ?> Website Logo" src="assets/elements/logo.png"/>

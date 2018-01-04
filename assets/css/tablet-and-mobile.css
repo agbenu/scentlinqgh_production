@@ -1,0 +1,397 @@
+/*LANDSCAPE TABLETS ////////////////////////////////////////////////////////////////////////////////////*/
+@media screen and (max-width: 1024px) {
+
+   body {
+      background-color: #323232;
+   }
+   
+   html,body, #header {
+	min-width: 100%;;
+}
+
+#removeStyle {
+	display: block;
+}
+
+   /*GENERAL STYLINGS ===========================================================*/
+   /*Grid System*/
+   #grid1,#grid2,#grid3 {
+      width: 50%;
+   }
+
+   #grid3 {
+      display: none;
+   }
+
+   /*HEADER =====================================================================*/
+   /*Header Wrapper*/
+   #header {
+      background-color: inherit;
+      border: none;
+      width: 210px;
+      height: 100%;
+      overflow: hidden;
+      position: fixed;
+      top: 0; left: 0; bottom: 0;
+      z-index: 0;
+
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+
+      -webkit-transform: translate(-210px, 0px);
+      -moz-transform: translate(-210px, 0px);
+      -o-transform: translate(-210px, 0px);
+      -ms-transform: translate(-210px, 0px);
+      transform: translate(-210px, 0px);
+
+      -moz-transition: -moz-transform 0.2s ease-out;
+      -o-transition: -o-transform 0.2s ease-out;
+      -webkit-transition: -webkit-transform 0.2s ease-out;
+      transition: transform 0.2s ease-out;
+   }
+
+   #header.headerOpen {
+      -webkit-transform: translate(0px,0px);
+      -moz-transform: translate(0px,0px);
+      -o-transform: translate(0px,0px);
+      -ms-transform: translate(0px,0px);
+      transform: translate(0px,0px);
+   }
+
+   #page.pageOpen,#secondHeader.pageOpen {
+      -webkit-transform: translate(200px,0px);
+      -moz-transform: translate(210px,0px);
+      -o-transform: translate(210px,0px);
+      -ms-transform: translate(210px,0px);
+      transform: translate(210px,0px);
+   }
+
+      /*Header Content Container*/
+      #headerContent {
+         width: 210px;
+         height: 100%;
+         padding: 0;
+         margin: 0;
+         overflow-y: auto;
+         overflow-x: hidden;
+      }
+
+      /*Header Logo*/
+      #headerLogo {
+         display: none;
+      }
+
+      /*Main Menu & Dropdowns*/
+      #mainMenu, #mainMenu li,
+      #mainMenu .subMenu li {
+         background-color: inherit;
+         border: none;
+         margin: 0;
+         padding: 0;
+         float: none;
+         text-align: left;
+      }
+
+         #mainMenu a,
+         #mainMenu .subMenu li a {
+            color: #929292;
+            background-color: inherit;
+            border-top: none;
+            border-bottom: 1px solid #404040;
+            border-left: none;
+            border-right: none;
+
+            width: 100%;
+            padding: 15px;
+            margin: 0;
+
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+            border-radius: 0px;
+         }
+
+         #mainMenu .subMenu li a {
+            padding-left: 30px;
+         }
+
+         #mainMenu a:hover,
+         #mainMenu .subMenu li a:hover  {
+            color: #7A7A7A;
+            background-color: #383838;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+         }
+
+         #mainMenu a.active,
+         #mainMenu a.active:hover,
+         #mainMenu .subMenu li a.active,
+         #mainMenu .subMenu li a.active:hover {
+            color: #616161;
+            background-color: #242424;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+         }
+
+         #mainMenu .subMenu ul {
+            color: inherit;
+            background-color: inherit;
+            border: none;
+
+            width: 100%;
+            display: block;
+            padding: 0;
+            margin: 0;
+            position: relative;
+            text-align: left;
+
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+         }
+
+         #mainMenu .subMenu ul:before {
+            display: none;
+            filter: alpha(opacity=0);
+            opacity: 0;
+         }
+
+         .subMenu .noLink:before,
+         .subMenu > a:before {
+            content: "+ ";
+         }
+
+         .subMenu .noLink,
+         .subMenu .noLink:hover {
+            color: #707070 !important;
+            background-color: #323232 !important;
+         }
+
+      /*Second Header Container & Elements*/
+      #secondHeader {
+         color: #FFF;
+         background-color: #0D0D0D;
+         border-bottom: 1px solid #fff;
+
+         width: 100%;
+         height: 50px;
+         display: inline-block;
+            *display: inline;
+            zoom: 1;
+         position: fixed; top: 0; left: 0;
+         z-index: 1000;
+         overflow: hidden;
+         text-align: left;
+
+         -webkit-box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.3);
+         -moz-box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.3);
+         box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.3);
+
+         -moz-transition: -moz-transform 0.2s ease-out;
+         -o-transition: -o-transform 0.2s ease-out;
+         -webkit-transition: -webkit-transform 0.2s ease-out;
+         transition: transform 0.2s ease-out;
+      }
+
+         #secondHeader .menu-button {
+            background: url(../../assets/elements/nav-icon.png) no-repeat 15px 12px;
+            background-size: 25px 24px;
+
+            width: 115px;
+            display: inline-block;
+               *display: inline;
+               zoom: 1;
+            padding: 14px 0;
+            font-weight: bold;
+            text-indent: 50px;
+         }
+
+         #secondHeader .menu-button-active {
+            background: url(../../assets/elements/nav-icon-close.png) no-repeat 15px 12px;
+            background-size: 25px 24px;
+         }
+
+         #secondHeader img {
+            width: 150px;
+            padding: 17px 20px 0 0;
+            float: right;
+         }
+
+
+   /*FOOTER ======================================================================*/
+   /*Footer Menu*/
+   #footer .content .links,
+   #footer .content .socialbar  {
+      display: none;
+   }
+
+   /*Copyright Section*/
+   #footer .content .copyright {
+      text-align: center;
+      float: none;
+   }
+
+
+   /*PAGE LAYOUT ================================================================*/
+   /*Main Page Container*/
+   #page {
+      padding-top: 49px;
+      position: relative;
+
+      -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+      -moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+
+      -webkit-transition: all 0.2s ease-out;
+      -moz-transition: all 0.2s ease-out;
+      -ms-transition: all 0.2s ease-out;
+      -o-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out;
+   }
+
+   /*Content Container*/
+   .content {
+      padding: 50px;
+   }
+
+
+   /*PAGES ======================================================================*/
+   /*Contact Page >--------------------------------------------------------------*/
+   #contactDetails {
+      width: 50%;
+      padding-left: 50px;
+      margin-left: -6px;
+      text-align: center;
+   }
+
+   /*Contact Form*/
+   #contactForm {
+      width: 50%;
+   }
+
+}
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* PORTRAIT TABLETS ///////////////////////////////////////////////////////////////////////////////////*/
+@media screen and (max-width: 770px) {
+
+   /*GENERAL STYLINGS ===========================================================*/
+   /*Form Elements*/
+   .ui-datepicker {
+      font-size: 1em !important;
+   }
+
+   /*Grid System*/
+   #grid1,#grid2,#grid3 {
+      width: 100%;
+   }
+
+   #grid1,#grid2,#grid3 {
+      padding: 0;
+      display: block;
+   }
+
+   #grid1 .gridElement:last-of-type,
+   #grid2 .gridElement:last-of-type {
+      margin-bottom: 30px;
+   }
+
+   /*Side by Side System*/
+   .side-by-side div, .side-by-side.right div,
+   .side-by-side img, .side-by-side.right img {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+   }
+
+   .side-by-side img,
+   .side-by-side.right img  {
+      padding-bottom: 20px;
+   }
+
+
+   /*PAGE LAYOUT ================================================================*/
+   /*Content Container*/
+   .content {
+      padding: 30px;
+   }
+
+
+   /*PAGES ======================================================================*/
+   /*Contact Page >--------------------------------------------------------------*/
+   #contactDetails, #contactForm {
+      width: 95%;
+      padding: 0;
+      margin: 0;
+   }
+
+   #contactDetails {
+      border-top: 1px solid #CED1D6;
+      padding-top: 30px;
+      margin-top: 30px;
+   }
+
+}
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* PHONES /////////////////////////////////////////////////////////////////////////////////////////////*/
+@media screen and (max-width: 500px) {
+
+   /*GENERAL STYLINGS ===========================================================*/
+   /*Grid System*/
+   .gridElement {
+      margin-bottom: 20px;
+   }
+
+   #grid1 .gridElement:last-of-type,
+   #grid2 .gridElement:last-of-type {
+      margin-bottom: 20px;
+   }
+
+
+   /*PAGE LAYOUT ================================================================*/
+   /*Content Container*/
+   .content {
+      padding: 20px;
+   }
+
+
+   /*PAGES ======================================================================*/
+   /*Contact Page >--------------------------------------------------------------*/
+   #contactDetails, #contactForm  {
+      width: 100%;
+   }
+
+      /*(Tab to call & send SMS)*/
+      #contactDetails div div {
+         display: block;
+      }
+
+         #contactDetails div div a {
+            color: #FFF;
+            background-color: #CDCDCD;
+
+            width: 100%;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+
+            border-radius: 2px;
+            -moz-border-radius: 2px;
+            -webkit-border-radius: 2px;
+         }
+
+         #contactDetails div div a:hover {
+            background-color: #0099FF;
+         }
+
+
+   /*Error Pages >---------------------------------------------------------------*/
+   #error404 {
+      padding: 100px 20px;
+   }
+
+}
